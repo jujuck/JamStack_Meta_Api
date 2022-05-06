@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Getting Started with the meta api project
+Start cloning the project and run `npm install`. Axios is already here !!!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The goal is to discover a no code solution for multiple API fecthing and consume its own endPoint
+- 1 Go on the *https://dashboard.meta-api.io/login* adn create an account. Be sure tu use your wilder alias @wilder.school. It will offer you an upgrade plan for one year.
+- 2 In your dashboard, click on the *Open Spells* menu on the left. You will see a catalogs of ready to use code for testing. Choose the *Starter Spell: Yodish a Chuck Norris fact* and click on *Use this Spell* => *Continue* => *Save and Run*
+At this point, you will see the result of your spell on a `json` format. Click on *Push to production*
+```
+What does it do ? It request a random Chuck Norris Fact with an Api and then translate it in a Yoddish language thanks to another API.
+```
+- 3 Back on your interface, you can click on the *Spells* on the menu, Select your spell and * Edit Code* on the right. You will see the actual back end code running for you. Just made as magic...
+- 4 Go back on your *Spell* interface and select again the *Chuck Norris Spell*. Click on *Deployments details* and memorize the url ('We will fetch it later on react').
+- 5 Last thing, on the left menu, click on *Meta-API Keys*, to get your private API KEY and memorize it to.
 
-## Available Scripts
+`ADVICE` you can store your API Key and your Spell ID on a `.env` file in your project
 
-In the project directory, you can run:
+## The React APP
+- 1 On your `App.jsx` file, create a button to launch the request for the spell. We want our user to click to get a random fact.
+- 2 On this button, add a method `getFact()` and create it. In this method, fetch the url of your spell (Don't forget to add your apikey at the end)
+`https://api.meta-api.io/api/spells/${process.env.REACT_APP_META_API_SPELL}/runSync?apikey=${process.env.REACT_APP_META_API}`. Store the result on a state.
+- 3 Now use this object to display the Chuck Norris Translation..
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Easy...
+Don't hesitate to discover more staff on this solution. They have a lot of ready to use Api connector to protect your sensitive key.
