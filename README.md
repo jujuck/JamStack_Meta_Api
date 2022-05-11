@@ -1,5 +1,6 @@
 # Getting Started with the meta api project
 Start cloning the project and run `npm install`. Axios is already here !!!
+You can follow the live coding of this project on : https://drive.google.com/file/d/1BUKVliFkfvVZTyM7QmjN5ZgKlqKJTtE-/view?usp=sharing
 
 # The goal is to discover a no code solution for multiple API fecthing and consume its own endPoint
 - 1 Go on the *https://dashboard.meta-api.io/login* adn create an account. Be sure tu use your wilder alias @wilder.school. It will offer you an upgrade plan for one year.
